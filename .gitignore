@@ -1,5 +1,6 @@
 # Ignore everything
 *
+tmux/plugins/
 
 # But not these files...
 !.gitignore
