@@ -1,0 +1,28 @@
+# some more ls aliases
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+
+# My aliases
+alias py='python3'
+alias ac='source venv/bin/activate'
+alias de='deactivate'
+alias xml='xmlstarlet ed'
+alias cert='openssl x509 -text -noout -in'
+alias emrun='emrun --browser /home/freppan/.src/emsdk/browsers/chrome'
+alias nconf='nvim ~/.config/nvim'
+
+# Docker Aliases
+alias dcb='sudo docker-compose build'
+alias dcu='sudo docker-compose up -d'
+alias dcud='sudo docker-compose up'
+alias dcd='sudo docker-compose down'
+alias dcr='sudo docker-compose down && sudo docker-compose build && sudo docker-compose up -d'
+alias dcp='sudo docker-compose ps'
+alias dcdev='sudo docker-compose -f dev-docker-compose.yml up -d'
+alias dcrdev='sudo docker-compose down && sudo docker-compose -f dev-docker-compose.yml build && sudo docker-compose -f dev-docker-compose.yml up -d'
+alias dockerclean='docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -aq)'
+
+# My exports and sources
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
