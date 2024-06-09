@@ -27,6 +27,7 @@ map("n", "<Leader>e", ':NvimTreeToggle<CR>', opts)
 
 -- Telescope --
 map('n', '<Leader>f', ':Telescope find_files<CR>', opts)
+map('n', '<Leader>F', ":lua require('telescope.builtin').find_files({find_command = { 'fdfind', '--type', 'f', '--no-ignore-vcs'}})<CR>", opts)
 map('n', '<Leader>lg', ':Telescope live_grep<CR>', opts)
 
 -- Tmux --
