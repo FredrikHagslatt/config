@@ -42,12 +42,12 @@ map({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
 map({'n', 'x', 'o'}, 'gs', '<Plug>(leap-from-window)')
 
 --- Swedish keyboard --
--- map({"n", "v"}, '"', "@", opts)
--- map({"n", "v"}, '+', "$", opts)
--- map({"n", "v", "i"}, "ö", "[", opts)
--- map({"n", "v", "i"}, "ä", "]", opts)
--- map({"n", "v", "i"}, "Ö", "{", opts)
--- map({"n", "v", "i"}, "Ä", "}", opts)
+map({"n", "v"}, '"', "@", opts)
+map({"n", "v"}, '+', "$", opts)
+map({"n", "v", "i"}, "ö", "[", opts)
+map({"n", "v", "i"}, "ä", "]", opts)
+map({"n", "v", "i"}, "Ö", "{", opts)
+map({"n", "v", "i"}, "Ä", "}", opts)
 
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", opts)

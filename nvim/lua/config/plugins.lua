@@ -39,6 +39,10 @@ local plugins = {
   },
 
   {
+    'tpope/vim-obsession'
+  },
+
+  {
     'akinsho/bufferline.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons', },
   },
@@ -72,11 +76,11 @@ local plugins = {
     dependencies  = { "plenary" }
   },
 
-  {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = true,
-  },
+  -- {
+  --   "windwp/nvim-autopairs",
+  --   event = "InsertEnter",
+  --   config = true,
+  -- },
   
   {
     'ggandor/leap.nvim',
