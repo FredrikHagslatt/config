@@ -1,11 +1,10 @@
-# Ignore everything
-*
 tmux/plugins/
 
-# But not these files...
-!.gitignore
-!nvim/
-!tmux/
-!bash/
 
-
+#Other stuff
+act
+dconf
+gtk*
+htop
+lvim
+pulse
