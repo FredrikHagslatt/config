@@ -4,6 +4,8 @@ if not status_ok then
   return
 end
 
+print("Commentcomment")
+
 local setup = {
   marker_padding = true,
   line_mapping = "<leader>cc",

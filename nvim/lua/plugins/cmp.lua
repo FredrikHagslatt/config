@@ -3,7 +3,6 @@ if not status_ok then
   print("No cmp found when configuring..")
   return
 end
-print('Configuring cmp')
 
 local setup = {
   mapping = {

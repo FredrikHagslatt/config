@@ -23,7 +23,10 @@ map('n', '<leader>ld', vim.diagnostic.setloclist, lsp_opts)
 -- map('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, lsp_opts)
 
 -- NvimTreeToggle --
-map("n", "<Leader>e", ':NvimTreeToggle<CR>', opts)
+-- map("n", "<Leader>e", ':NvimTreeToggle<CR>', opts)
+
+-- NvimTreeToggle --
+map("n", "<Leader>e", ':Oil --float<CR>', opts)
 
 -- Telescope --
 map('n', '<Leader>f', ':Telescope find_files<CR>', opts)
