@@ -17,6 +17,7 @@ local setup = {
     indicator = {
       style = 'underline',
     },
+    numbers = "ordinal",
     modified_icon = '●',
     left_trunc_marker = '',
     right_trunc_marker = '',
@@ -36,4 +37,16 @@ local setup = {
 }
 
 plugin.setup(setup)
+-- Lua function to jump to buffer by ordinal number
+local function jump_to_buffer_by_ordinal(ordinal)
+  require('bufferline').go_to_buffer(tonumber(ordinal), true)
+end
 
+-- Register the Lua function as a Vim command
+vim.api.nvim_create_user_command(
+  'JumpBufferByOrdinal',
+  function(opts)
+    jump_to_buffer_by_ordinal(opts.args)
+  end,
+  { nargs = 1 }
+)

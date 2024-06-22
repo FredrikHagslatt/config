@@ -42,7 +42,6 @@ map({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
 map({'n', 'x', 'o'}, 'gs', '<Plug>(leap-from-window)')
 
 --- Swedish keyboard --
-map({"n", "v"}, '"', "@", opts)
 map({"n", "v"}, '+', "$", opts)
 map({"n", "v", "i"}, "ö", "[", opts)
 map({"n", "v", "i"}, "ä", "]", opts)
@@ -65,6 +64,15 @@ map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 map("n", "<A-h>", ":bprevious<CR>", opts)
 map("n", "<A-l>", ":bnext<CR>", opts)
 map("n", "<leader>w", ":bd<CR>", opts)
+map("n", "<leader>1", ":JumpBufferByOrdinal 1<CR>", opts)
+map("n", "<leader>2", ":JumpBufferByOrdinal 2<CR>", opts)
+map("n", "<leader>3", ":JumpBufferByOrdinal 3<CR>", opts)
+map("n", "<leader>4", ":JumpBufferByOrdinal 4<CR>", opts)
+map("n", "<leader>5", ":JumpBufferByOrdinal 5<CR>", opts)
+map("n", "<leader>6", ":JumpBufferByOrdinal 6<CR>", opts)
+map("n", "<leader>7", ":JumpBufferByOrdinal 7<CR>", opts)
+map("n", "<leader>8", ":JumpBufferByOrdinal 8<CR>", opts)
+map("n", "<leader>9", ":JumpBufferByOrdinal 9<CR>", opts)
 
 -- Move text up and down
 map("n", "<A-Up>", ":m .-2<CR>==", opts)
