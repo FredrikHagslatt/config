@@ -14,9 +14,19 @@ vim.opt.rtp:prepend(lazy_path)
 
 
 local plugins = {
+  { 'christoomey/vim-tmux-navigator' },
+  { 'tpope/vim-obsession' },
+  { 'terrortylor/nvim-comment' },
+  { 'mfussenegger/nvim-dap' },
+  { 'ggandor/leap.nvim' },
+  { "williamboman/mason.nvim" },
+  { "williamboman/mason-lspconfig.nvim" },
+  { "neovim/nvim-lspconfig" },
+  { 'ThePrimeagen/vim-be-good' },
+  
   {
-      'nvim-lua/plenary.nvim',
-      name = 'plenary',
+    'nvim-lua/plenary.nvim',
+    name = 'plenary',
   },
 
   {
@@ -36,14 +46,6 @@ local plugins = {
   },
 
   {
-    'christoomey/vim-tmux-navigator'
-  },
-
-  {
-    'tpope/vim-obsession'
-  },
-
-  {
     'akinsho/bufferline.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons', },
   },
@@ -60,16 +62,8 @@ local plugins = {
   },
 
   {
-    'terrortylor/nvim-comment',
-  },
-
-  {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
-  },
-
-  {
-    'mfussenegger/nvim-dap',
   },
 
   {
@@ -83,30 +77,8 @@ local plugins = {
   --   config = true,
   -- },
   
-  {
-    'ggandor/leap.nvim',
-  },
-  
-  {
-    "williamboman/mason.nvim",
-  },
-  
-  {
-    "williamboman/mason-lspconfig.nvim",
-  },
-  
-  {
-    "neovim/nvim-lspconfig",
-  },
-
-  { 
-    'ThePrimeagen/vim-be-good',
-  },
-
   -- Color schemes --
-  {
-    'Mofiqul/vscode.nvim',
-  },
+  { 'Mofiqul/vscode.nvim' },
 
   {
     "folke/tokyonight.nvim",

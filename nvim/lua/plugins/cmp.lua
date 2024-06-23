@@ -6,7 +6,7 @@ end
 
 local setup = {
   mapping = {
-    -- ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-Space>'] = cmp.mapping.complete(),
     ['<Tab>'] = cmp.mapping.select_next_item(),
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     ['<C-e>'] = cmp.mapping.abort(),

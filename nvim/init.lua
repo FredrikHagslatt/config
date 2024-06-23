@@ -3,6 +3,8 @@ require('config.keymaps')
 require('config.plugins')
 require('config.plugins_conf')
 
+vim.o.scrolloff = 10
+
 -- Automatically reload Neovim whenever you save the configuration files
 vim.cmd([[
   augroup ConfigReload

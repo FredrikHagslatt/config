@@ -37,3 +37,5 @@ for _, lsp in ipairs(servers) do
     },
   }
 end
+
+vim.o.signcolumn = "no"

@@ -13,7 +13,7 @@ alias rmb='rm -rf build'
 alias xml='xmlstarlet ed'
 alias cert='openssl x509 -text -noout -in'
 alias emrun='emrun --browser /home/freppan/.src/emsdk/browsers/chrome'
-alias nconf='nvim ~/.config/nvim'
+alias nconf='cd ~/.config/nvim && nvim && cd - > /dev/null 2>&1'
 
 # Docker Aliases
 alias dcb='sudo docker-compose build'
