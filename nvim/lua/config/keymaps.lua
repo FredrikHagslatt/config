@@ -66,6 +66,7 @@ map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 map("n", "<A-h>", ":bprevious<CR>", opts)
 map("n", "<A-l>", ":bnext<CR>", opts)
+map("n", "<C-w>", ":bd<CR>", opts)
 map("n", "<leader>w", ":bd<CR>", opts)
 map("n", "<leader>1", ":JumpBufferByOrdinal 1<CR>", opts)
 map("n", "<leader>2", ":JumpBufferByOrdinal 2<CR>", opts)
@@ -103,6 +104,7 @@ map("n", "<C-u>", "<C-u>zz", opts)
 
 -- Misc --
 map("n", "<leader>h", ":noh<CR>", opts)
+map("n", "<leader>w", ":w<CR>", opts)
 
 -- Open this file for reference --
 
