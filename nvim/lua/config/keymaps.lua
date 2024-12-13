@@ -105,6 +105,7 @@ map("n", "<C-u>", "<C-u>zz", opts)
 -- Misc --
 map("n", "<leader>h", ":noh<CR>", opts)
 map("n", "<leader>w", ":w<CR>", opts)
+map('n', '<leader>b', 'A <CR>{<CR>}<Esc>O', opts)
 
 -- Open this file for reference --
 

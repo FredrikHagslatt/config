@@ -9,12 +9,11 @@ set.mouse = ""
 set.number = true
 set.relativenumber = true
 set.expandtab = true
-set.shiftwidth = 4
-set.tabstop = 4
+set.shiftwidth = 3
+set.tabstop = 3
 set.smartindent = true
 set.wrap = false
 set.termguicolors = true
-
 
 
 -- Autocmd to set tab witdh to 2 spaces for .lua files

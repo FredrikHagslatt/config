@@ -23,7 +23,7 @@ local plugins = {
   { "williamboman/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
   { 'ThePrimeagen/vim-be-good' },
-  
+
   {
     'nvim-lua/plenary.nvim',
     name = 'plenary',

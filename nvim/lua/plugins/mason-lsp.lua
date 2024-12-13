@@ -31,6 +31,7 @@ local servers = { "pyright" , "clangd" }
 -- local servers = { "ruff", "clangd" }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
+    autostart = false,
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
