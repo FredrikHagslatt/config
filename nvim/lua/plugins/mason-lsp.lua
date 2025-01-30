@@ -21,13 +21,13 @@ end
 require("mason").setup()
 require("mason-lspconfig").setup
 {
-  ensure_installed = { "pyright", "clangd" },
+  ensure_installed = { "pyright", "clangd"},
 }
 
 -- After setting up mason-lspconfig you may set up servers via lspconfig
 -- require("lspconfig").lua_ls.setup {}
 -- require("lspconfig").rust_analyzer.setup {}
-local servers = { "pyright" , "clangd" }
+local servers = { "pyright" , "clangd"}
 -- local servers = { "ruff", "clangd" }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

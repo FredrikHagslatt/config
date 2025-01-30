@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 local setup = {
-  ensure_installed = { "c", "cpp", "python", "lua", "vimdoc"},
+  ensure_installed = { "c", "cpp", "python", "lua", "vimdoc", "robot"},
   highlight = {
     enable = true,
   },
