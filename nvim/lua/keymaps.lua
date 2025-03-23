@@ -32,7 +32,8 @@ map("n", "<Leader>e", ':Oil --float<CR>', opts)
 map('n', '<Leader>f', ':Telescope find_files<CR>', opts)
 map('n', '<Leader>F', ':lua require("telescope.builtin").find_files({find_command = { "fdfind", "--type", "f", "--no-ignore-vcs"}})<CR>', opts)
 -- map('n', '<Leader>lg', ':Telescope live_grep<CR>', opts)
-map('n', '<Leader>lg', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>', opts)
+map('n', '<Leader>lg', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>""<Left>', opts)
+map('n', '<Leader>lc', ':lua require("telescope-live-grep-args.shortcuts").grep_word_under_cursor()<CR>', opts)
 
 -- Tmux --
 map('n', 'C-h>', ':TmuxNavigateLeft<CR>', opts)
