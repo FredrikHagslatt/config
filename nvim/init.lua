@@ -1,7 +1,7 @@
-require('config.options')
-require('config.keymaps')
-require('config.plugins')
-require('config.plugins_conf')
+require('options')
+require('keymaps')
+require('plugins')
+require('plugin_configs')
 
 vim.o.scrolloff = 10
 

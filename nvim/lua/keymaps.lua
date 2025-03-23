@@ -30,8 +30,9 @@ map("n", "<Leader>e", ':Oil --float<CR>', opts)
 
 -- Telescope --
 map('n', '<Leader>f', ':Telescope find_files<CR>', opts)
-map('n', '<Leader>F', ":lua require('telescope.builtin').find_files({find_command = { 'fdfind', '--type', 'f', '--no-ignore-vcs'}})<CR>", opts)
-map('n', '<Leader>lg', ':Telescope live_grep<CR>', opts)
+map('n', '<Leader>F', ':lua require("telescope.builtin").find_files({find_command = { "fdfind", "--type", "f", "--no-ignore-vcs"}})<CR>', opts)
+-- map('n', '<Leader>lg', ':Telescope live_grep<CR>', opts)
+map('n', '<Leader>lg', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>', opts)
 
 -- Tmux --
 map('n', 'C-h>', ':TmuxNavigateLeft<CR>', opts)
@@ -111,7 +112,7 @@ map('n', '<leader>b', 'A <CR>{<CR>}<Esc>O', opts)
 
 map("n", "<leader>km", ":lua keymaps()<CR>")
 function keymaps()
-  vim.cmd("edit" .. "~/.config/nvim/lua/config/keymaps.lua")
+  vim.cmd("edit" .. "~/.config/nvim/lua/keymaps.lua")
 end
 
 map("n", "<leader>kb", ":lua keybinds()<CR>")
