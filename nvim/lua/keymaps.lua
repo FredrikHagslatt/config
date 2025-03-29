@@ -28,21 +28,25 @@ map('n', '<leader>ld', vim.diagnostic.setloclist, lsp_opts)
 -- NvimTreeToggle --
 map("n", "<Leader>e", ':Oil --float<CR>', opts)
 
+-- Telescope misc --
+-- Default to cwd
+vim.g.secondary_path = vim.fn.expand("%:p:h")
+
+-- Set secondary path
+map("n", "<Leader>ss", function()
+  vim.g.secondary_path = vim.fn.expand("%:p:h")
+  print("Stored secondary path: " .. vim.g.secondary_path)
+end, opts)
+
+-- Telescope in secondary path --
+map('n', '<Leader>f', ':lua require("telescope.builtin").find_files({cwd = vim.g.secondary_path, find_command = { "fdfind", "--type", "f", "--no-ignore-vcs"}})<CR>', opts)
+map('n', '<Leader>lg', ':lua require("telescope").extensions.live_grep_args.live_grep_args({cwd = vim.g.secondary_path})<CR>""<Left>', opts)
+map('n', '<Leader>lc', ':lua require("telescope-live-grep-args.shortcuts").grep_word_under_cursor({cwd = vim.g.secondary_path})<CR>', opts)
+
 -- Telescope in cwd --
-map('n', '<Leader>F', ':Telescope find_files<CR>', opts)
-map('n', '<Leader>f', ':lua require("telescope.builtin").find_files({find_command = { "fdfind", "--type", "f", "--no-ignore-vcs"}})<CR>', opts)
-map('n', '<Leader>lg', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>""<Left>', opts)
-map('n', '<Leader>lc', ':lua require("telescope-live-grep-args.shortcuts").grep_word_under_cursor()<CR>', opts)
--- map('n', '<Leader>lhg', ':lua require("telescope.builtin").live_grep({cwd = vim.fn.expand("%:p:h")})<CR>', opts)
-
--- Telescope in this dir --
-map('n', '<Leader>hf', ':lua require("telescope.builtin").find_files({cwd = vim.fn.expand("%:p:h"), find_command = { "fdfind", "--type", "f", "--no-ignore-vcs"}})<CR>', opts)
-map('n', '<Leader>lhg', ':lua require("telescope").extensions.live_grep_args.live_grep_args({cwd = vim.fn.expand("%:p:h")})<CR>""<Left>', opts)
-map('n', '<Leader>lhc', ':lua require("telescope-live-grep-args.shortcuts").grep_word_under_cursor({cwd = vim.fn.expand("%:p:h")})<CR>', opts)
--- map('n', '<Leader>lhf', ':lua require("telescope.builtin").find_files({cwd = vim.fn.expand("%:p:h")})<CR>', opts)
-
--- require('telescope.builtin').find_files({cwd = vim.fn.expand('%:p:h')})
-
+map('n', '<Leader>hf', ':lua require("telescope.builtin").find_files({find_command = { "fdfind", "--type", "f", "--no-ignore-vcs"}})<CR>', opts)
+map('n', '<Leader>lhg', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>""<Left>', opts)
+map('n', '<Leader>lhc', ':lua require("telescope-live-grep-args.shortcuts").grep_word_under_cursor()<CR>', opts)
 
 -- Tmux --
 map('n', 'C-h>', ':TmuxNavigateLeft<CR>', opts)
@@ -114,9 +118,9 @@ map("n", "<C-d>", "<C-d>zz", opts)
 map("n", "<C-u>", "<C-u>zz", opts)
 
 -- Misc --
-map("n", "<leader>h", ":noh<CR>", opts)
-map("n", "<leader>w", ":w<CR>", opts)
-map('n', '<leader>b', 'A <CR>{<CR>}<Esc>O', opts)
+map("n", "<leader>h", ":noh<CR>", opts)           --Remove highlights
+map("n", "<leader>w", ":w<CR>", opts)             --Save file
+map('n', '<leader>b', 'A <CR>{<CR>}<Esc>O', opts) --Snippet squigly brackets
 
 -- Open this file for reference --
 
