@@ -36,6 +36,7 @@ local plugins = {
    
   {
     'nvim-treesitter/nvim-treesitter',
+    commit = '9d80c149',
     build = ':TSUpdate',
   },
 
