@@ -17,7 +17,6 @@ local plugins = {
   { 'christoomey/vim-tmux-navigator' },
   { 'tpope/vim-obsession' },
   { 'terrortylor/nvim-comment' },
-  { 'mfussenegger/nvim-dap' },
   { 'ggandor/leap.nvim' },
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
@@ -49,6 +48,18 @@ local plugins = {
   {
     'akinsho/bufferline.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons', },
+  },
+
+--   { 'mfussenegger/nvim-dap',
+--     dependencies = {'rcarriga/nvim-dap-ui'},
+--   },
+
+  { "rcarriga/nvim-dap-ui", 
+    dependencies = 
+      {
+        "mfussenegger/nvim-dap", 
+        "nvim-neotest/nvim-nio"
+      } 
   },
 
   {

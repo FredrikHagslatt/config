@@ -59,6 +59,13 @@ map({'n', 'x', 'o'}, 's',  '<Plug>(leap-forward)')
 map({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
 map({'n', 'x', 'o'}, 'gs', '<Plug>(leap-from-window)')
 
+map("n", "<F5>", ':lua require("dap").continue()<CR>', opts)
+map("n", "<F10>", ':lua require("dap").step_over()<CR>', opts)
+map("n", "<F11>", ':lua require("dap").step_into()<CR>', opts)
+map("n", "<F12>", ':lua require("dap").step_out()<CR>', opts)
+map("n", "<Leader>db", ':lua require("dap").toggle_breakpoint()<CR>', opts)
+map("n", "<Leader>dr", ':lua require("dap").repl.open()<CR>', opts)
+
 --- Swedish keyboard --
 map({"n", "v"}, '+', "$", opts)
 map({"n", "v", "i"}, "ö", "[", opts)
