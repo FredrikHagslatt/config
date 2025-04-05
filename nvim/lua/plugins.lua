@@ -12,25 +12,26 @@ if not vim.loop.fs_stat(lazy_path) then
 end
 vim.opt.rtp:prepend(lazy_path)
 
-
 local plugins = {
-  { 'christoomey/vim-tmux-navigator' },
-  { 'tpope/vim-obsession' },
-  { 'terrortylor/nvim-comment' },
-  { 'ggandor/leap.nvim' },
-  { "williamboman/mason.nvim" },
-  { "williamboman/mason-lspconfig.nvim" },
-  { "neovim/nvim-lspconfig" },
-  { 'ThePrimeagen/vim-be-good' },
+  { 'christoomey/vim-tmux-navigator', commit ='791dacf'},
+  { 'tpope/vim-obsession', commit ='ed9dfc7' },
+  { 'terrortylor/nvim-comment', commit ='e9ac16a' },
+  { 'ggandor/leap.nvim', commit ='346a16e' },
+  { "williamboman/mason.nvim", commit ='fc98833' },
+  { "williamboman/mason-lspconfig.nvim", commit ='1a31f82' },
+  { "neovim/nvim-lspconfig", commit ='40f120c' },
+  { 'ThePrimeagen/vim-be-good'},
 
   {
     'nvim-lua/plenary.nvim',
+    commit = '857c5ac',
     name = 'plenary',
   },
 
   {
     'nvim-telescope/telescope.nvim',
-    dependencies = { 'plenary', "nvim-telescope/telescope-live-grep-args.nvim" }
+    commit = 'a4ed825',
+    dependencies = { 'plenary', "nvim-telescope/telescope-live-grep-args.nvim" };
   },
    
   {
@@ -41,20 +42,23 @@ local plugins = {
 
   {
     'stevearc/oil.nvim',
+    commit = '302bbac',
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
   {
     'akinsho/bufferline.nvim',
+    commit = '655133c',
     dependencies = { 'nvim-tree/nvim-web-devicons', },
   },
 
---   { 'mfussenegger/nvim-dap',
---     dependencies = {'rcarriga/nvim-dap-ui'},
---   },
+  { 'mfussenegger/nvim-dap',
+    commit = '7aade9e',
+  },
 
   { "rcarriga/nvim-dap-ui", 
+    commit = 'bc81f8d',
     dependencies = 
       {
         "mfussenegger/nvim-dap", 
@@ -75,11 +79,13 @@ local plugins = {
 
   {
     'nvim-lualine/lualine.nvim',
+    commit = '1517caa',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
 
   {
     "jiaoshijie/undotree",
+    commit = 'eab459a',
     dependencies  = { "plenary" }
   },
 
