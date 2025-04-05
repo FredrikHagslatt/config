@@ -65,6 +65,7 @@ map("n", "<F11>", ':lua require("dap").step_into()<CR>', opts)
 map("n", "<F12>", ':lua require("dap").step_out()<CR>', opts)
 map("n", "<Leader>db", ':lua require("dap").toggle_breakpoint()<CR>', opts)
 map("n", "<Leader>dr", ':lua require("dap").repl.open()<CR>', opts)
+map("n", "<Leader>dt", ':lua require("dap-ui").toggle()<CR>', opts)
 
 --- Swedish keyboard --
 map({"n", "v"}, '+', "$", opts)

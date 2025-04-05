@@ -50,11 +50,18 @@ local plugins = {
   {
     'akinsho/bufferline.nvim',
     commit = '655133c',
-    dependencies = { 'nvim-tree/nvim-web-devicons', },
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
 
-  { 'mfussenegger/nvim-dap',
+  { 
+    'mfussenegger/nvim-dap',
     commit = '7aade9e',
+  },
+
+  { 
+    'mfussenegger/nvim-dap-python',
+    commit = '3428282',
+    dependencies = { 'mfussenegger/nvim-dap' },
   },
 
   { "rcarriga/nvim-dap-ui", 
