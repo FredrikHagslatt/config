@@ -4,4 +4,21 @@ if not status_ok then
   return
 end
 
+plugin.setup(
+{
+  defaults =
+  {
+    file_ignore_patterns = 
+    {
+      "__pycache__",
+      "%.pyc",
+      "%.pyo",
+      "%.git/",
+      "venv/",
+      "build/",
+    },
+  },
+}
+)
+
 plugin.load_extension("live_grep_args")
