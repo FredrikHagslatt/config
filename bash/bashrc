@@ -14,6 +14,8 @@ alias xml='xmlstarlet ed'
 alias cert='openssl x509 -text -noout -in'
 alias emrun='emrun --browser /home/freppan/.src/emsdk/browsers/chrome'
 alias nconf='cd ~/.config/nvim && nvim && cd - > /dev/null 2>&1'
+alias ac='source .venv/bin/activate'
+alias de='deactivate'
 
 # Docker Aliases
 alias dcb='sudo docker-compose build'
