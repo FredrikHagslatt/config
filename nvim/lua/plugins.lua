@@ -58,11 +58,11 @@ local plugins = {
     commit = '7aade9e',
   },
 
-  { 
-    'mfussenegger/nvim-dap-python',
-    commit = '3428282',
-    dependencies = { 'mfussenegger/nvim-dap' },
-  },
+  -- { 
+  --   'mfussenegger/nvim-dap-python',
+  --   commit = '3428282',
+  --   dependencies = { 'mfussenegger/nvim-dap' },
+  -- },
 
   { "rcarriga/nvim-dap-ui", 
     commit = 'bc81f8d',
