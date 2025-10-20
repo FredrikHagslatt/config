@@ -18,6 +18,19 @@ plugin.setup(
       "build/",
     },
   },
+  extensions = {
+    live_grep_args = {
+      vimgrep_arguments = {
+        'rg',
+        '--color=never',
+        '--no-heading',
+        '--with-filename',
+        '--line-number',
+        '--column',
+        '--smart-case',
+      },
+    }
+  }
 }
 )
 
